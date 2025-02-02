@@ -100,3 +100,10 @@ nav {
     background-color: #cc5200;
     transform: scale(1.1);
 }
+.small-image {
+    width: 150px; /* Уменьшаем ширину */
+    display: block;
+    margin: 20px auto; /* Центрируем */
+    opacity: 0.8; /* Немного прозрачности */
+}
+
