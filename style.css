@@ -121,53 +121,46 @@ nav {
     animation: fadeIn 1s forwards 0.3s;
 }
 
+/* Уменьшаем иконки и улучшаем их отображение */
 .contact-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px; /* Уменьшили размер */
+    height: 40px; /* Уменьшили размер */
     margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Добавили анимацию */
 }
 
-/* Стили для формы обратной связи */
-.contact-form {
-    max-width: 500px;
-    margin: 40px auto;
-    text-align: left;
-    opacity: 0;
-    animation: fadeIn 1s forwards 0.6s;
+.contact-item:hover .contact-icon {
+    transform: scale(1.1); /* Увеличение при наведении */
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
+/* Улучшенные кнопки внизу */
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Расстояние между кнопками */
+    margin-bottom: 20px;
+}
+
+.footer-button {
+    padding: 10px 20px;
     font-size: 16px;
-    border: 2px solid #005fa3;
-    border-radius: 8px;
-    outline: none;
-    transition: 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #ff6600;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    background-color: #ff6600;
+    font-weight: bold;
     color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    background-color: #005fa3;
+    text-decoration: none;
+    border-radius: 5px;
     transition: background 0.3s, transform 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: #cc5200;
-    transform: scale(1.05);
+.footer-button:hover {
+    background-color: #004080;
+    transform: scale(1.05); /* Увеличение при наведении */
 }
 
+/* Уменьшаем изображение внизу */
+.small-image {
+    width: 120px; /* Еще уменьшили */
+    display: block;
+    margin: 20px auto;
+    opacity: 0.8;
+}
