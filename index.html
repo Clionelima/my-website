@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Робототехника</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -24,23 +24,61 @@
         <a href="contacts.html" class="nav-button">Контакты</a>
     </nav>
 
-    <!-- Поисковая строка -->
-    <div class="search-container">
-        <input type="text" placeholder="Поиск по сайту...">
-    </div>
-
     <!-- Основное содержимое -->
-<div class="parallax-layer"></div>
-<div class="container">
-    <h1>Добро пожаловать в мир робототехники!</h1>
-    <p>Исследуйте технологии будущего и создавайте умных роботов.</p>
-    <a href="about.html" class="button">Узнать больше</a>
-</div>
+    <div class="container">
+        <h1>Контакты</h1>
+        <p>Мы всегда рады вашим вопросам и предложениям. Напишите нам, и мы обязательно ответим!</p>
+
+        <!-- Контактная информация -->
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/3178/3178283.png" alt="Email" class="contact-icon">
+                <h2>Email</h2>
+                <p>support@robotics.com</p>
+            </div>
+            <div class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Телефон" class="contact-icon">
+                <h2>Телефон</h2>
+                <p>+7 (123) 456-78-90</p>
+            </div>
+            <div class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/684/684809.png" alt="Адрес" class="contact-icon">
+                <h2>Адрес</h2>
+                <p>ул. Главная, 60, Новое Девяткино, Ленинградская обл., 188661</p>
+            </div>
+        </div>
+
+        <!-- Яндекс.Карта -->
+        <div id="map" style="width: 100%; height: 400px; margin-top: 20px; border-radius: 10px; overflow: hidden;"></div>
+    </div>
 
     <!-- Маленькое изображение внизу -->
     <footer>
         <img src="https://raw.githubusercontent.com/Clionelima/my-website/main/робот%20промышленный.jpg" alt="Робототехника" class="small-image">
     </footer>
+
+    <!-- Подключение API Яндекс.Карт -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_api_ключ&lang=ru_RU" type="text/javascript"></script>
+    <script>
+        // Инициализация карты
+        ymaps.ready(init);
+
+        function init() {
+            // Координаты адреса
+            var myMap = new ymaps.Map("map", {
+                center: [60.0495, 30.4422], // Координаты Нового Девяткино
+                zoom: 15 // Масштаб
+            });
+
+            // Добавляем метку
+            var myPlacemark = new ymaps.Placemark([60.0495, 30.4422], {
+                hintContent: 'ул. Главная, 60, Новое Девяткино',
+                balloonContent: 'Мы находимся здесь!'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
 
 </body>
 </html>
