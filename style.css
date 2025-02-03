@@ -181,6 +181,7 @@ nav {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-top: 10px; /* Отступ от кнопки */
 }
 
 .dropdown-content a {
@@ -190,10 +191,12 @@ nav {
     display: block;
     text-align: left;
     transition: background 0.3s;
+    font-size: 16px; /* Размер шрифта */
 }
 
 .dropdown-content a:hover {
     background-color: #004080;
+    border-radius: 5px; /* Скругление углов при наведении */
 }
 
 /* Показываем список при наведении на кнопку */
@@ -201,4 +204,24 @@ nav {
     display: block;
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Стили для кнопки "Отчетность" внутри dropdown */
+.dropdown .nav-button {
+    background-color: transparent; /* Убираем фон */
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    padding: 12px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.dropdown .nav-button:hover {
+    background-color: #004080; /* Цвет фона при наведении */
+    transform: scale(1.1);
 }
