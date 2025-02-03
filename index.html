@@ -9,13 +9,20 @@
 </head>
 <body>
 
-    <!-- Навигационное меню -->
-    <nav>
-        <a href="index.html" class="nav-button">Главная</a>
-        <a href="about.html" class="nav-button">О проекте</a>
-        <a href="contacts.html" class="nav-button">Контакты</a>
-        <a href="contacts.html" class="nav-button"> Отчетность</a>
-    </nav>
+<!-- Навигационное меню -->
+<nav>
+    <a href="index.html" class="nav-button">Главная</a>
+    <a href="about.html" class="nav-button">О проекте</a>
+    <div class="dropdown">
+        <button class="nav-button">Отчетность</button>
+        <div class="dropdown-content">
+            <a href="#">Отчетность по МСФО</a>
+            <a href="#">Отчетность по РСБУ</a>
+            <a href="#">Годовая отчетность</a>
+        </div>
+    </div>
+    <a href="contacts.html" class="nav-button">Контакты</a>
+</nav>
 
     <!-- Поисковая строка -->
     <div class="search-container">
